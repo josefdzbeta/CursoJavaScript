@@ -1,4 +1,4 @@
-class Arma{
+export class Arma{
     constructor(){
         this.cargador = 6
         this.balas=0
