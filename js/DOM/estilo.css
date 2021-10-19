@@ -1,0 +1,10 @@
+body{
+    background-color: antiquewhite;
+}
+.c1 span{
+    font-weight: bold;
+}
+#correCaminos{
+    position: absolute;
+    left: 10px;
+}
