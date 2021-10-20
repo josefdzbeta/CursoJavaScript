@@ -1,0 +1,19 @@
+body{
+    background: linear-gradient(rgb(224, 149, 62), rgb(240, 193, 107)) fixed;
+   font-family: monospace;
+}
+h1{
+    font-size: 3rem;
+    
+}
+img{
+    height: 600px;
+    width: auto;
+    
+}
+.setas{
+    position: absolute;
+    height: 50px;
+    left: 100;
+    top: 50;
+}

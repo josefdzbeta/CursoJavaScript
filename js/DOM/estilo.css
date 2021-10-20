@@ -1,5 +1,6 @@
 body{
-    background-color: antiquewhite;
+    background: linear-gradient(#e66465, #9198e5) fixed;
+    
 }
 .c1 span{
     font-weight: bold;
@@ -8,3 +9,18 @@ body{
     position: absolute;
     left: 10px;
 }
+
+.borde{
+    border: 1px solid blue;
+}
+.negrita{
+    font-weight: bold;
+}
+img{
+    height: 300px;
+    width: auto;
+}
+/*
+.borde span{
+    font-weight: bold;
+}*/
