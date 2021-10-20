@@ -18,15 +18,13 @@ function manjeadorClick(){
 function ponerSeta(evento){
     console.log(evento)
     let seta = document.createElement('img')
-    
-    let seta = document.getElementById('setaPrueba')
+    seta.setAttribute('src', './img/seta.png')
+    seta.classList.add('seta')
     seta.style.top = `${evento.clientY - 25}px`
     seta.style.left = `${evento.clientX - 25}px`
+    let body = document.getElementsByTagName('body')[0]
+    body.appendChild(seta)
   
-    seta.setAttribute('src', 'img/seta.png')
-    seta.classList.add('setas')
-
-    document.body.appendChild(seta)
 
 
     
