@@ -9,6 +9,7 @@ function iniciar(){
     //img.manjeadorClick = manjeadorClick()
     //img.addEventListener('click', manjeadorClick)
     mapa.onclick = ponerSeta
+   
     
 }
 
@@ -21,12 +22,14 @@ function ponerSeta(evento){
     seta.setAttribute('src', './img/seta.png')
     seta.classList.add('seta')
     seta.style.top = `${evento.clientY - 25}px`
+    seta.oncontextmenu = quitarSeta
     seta.style.left = `${evento.clientX - 25}px`
-    let body = document.getElementsByTagName('body')[0]
-    body.appendChild(seta)
-  
+    document.body.appendChild(seta)
+}
 
-
-    
-
+function quitarSeta(evento) {
+    console.log(evento)
+    evento.stopPropagation()
+    evento.preventDefault()
+    evento.target.remove()
 }
