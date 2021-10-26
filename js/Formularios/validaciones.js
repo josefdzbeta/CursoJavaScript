@@ -26,6 +26,7 @@ function validar(evento) {
     if (document.getElementById('iNombre').length<3)
     return false
 
+
     
     //evento.preventDefault()
     //return false
