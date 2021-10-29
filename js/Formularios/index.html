@@ -3,7 +3,7 @@
 <head>
 <meta charset=utf-8 />
 <meta name=author content='Jose Angel' />
-<link rel=stylesheet href=style.css />
+<link rel=stylesheet href=css/style.css />
 
 <title>Validación de Formularios</title>
 </head>
@@ -19,7 +19,7 @@
       <label for="iNombre">Nombre</label>
     </div>
     <div class="col-75">
-      <input type="text" id="iNombre" placeholder="Nombre ...">
+      <input type="text" id="iNombre" placeholder="Nombre ..."required="required">
     </div>
   </div>
   <div class="row">
@@ -27,15 +27,15 @@
       <label for="iApellidos">Apellidos</label>
     </div>
     <div class="col-75">
-      <input type="text" id="iApellidos" placeholder="Apellidos...">
+      <input type="text" id="iApellidos" placeholder="Apellidos..."required="required">
     </div>
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="iEmail">Emilio</label>
+      <label for="iEmail" >Email</label>
     </div>
     <div class="col-75">
-      <input type="text" id="iEmail" placeholder="Correo eléctrico...">
+      <input type="text" id="iEmail" placeholder="Correo eléctrico..."required="required">
     </div>
   </div>
   <div class="row">
@@ -43,7 +43,7 @@
       <label for="iNIF">NIF</label>
     </div>
     <div class="col-75">
-      <input type="text" id="iNIF" pattern="[0-9]{8}[A-Z]" placeholder="NIF...">
+      <input type="text" id="iNIF" pattern="[0-9]{8}[A-Z]" placeholder="NIF..."required="required">
     </div>
   </div>
   <div class="row">
@@ -51,7 +51,7 @@
       <label for="iTelefono">Teléfono</label>
     </div>
     <div class="col-75">
-      <input type="text" id="iTelefono" placeholder="Teléfono... mi caaasa...">
+      <input type="text" id="iTelefono" placeholder="Teléfono... mi caaasa..."required="required">
     </div>
   </div>
   <div class="row">
@@ -94,6 +94,6 @@
   </div>
   </form>
 </div>
-  <script src="validaciones.js"></script>
+  <script src=js/validaciones.js></script>
 </body>
 </html>
