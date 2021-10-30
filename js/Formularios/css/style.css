@@ -53,7 +53,24 @@
     display: table;
     clear: both;
   }
-
+  i{
+    
+    color: #1ed12d;
+    opacity: 1;
+  }
+  
+  form label .incorrecto {
+    color: #bb2929;
+  }
+  
+  .formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+  }
+  
+  .formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid #bb2929;
+  }
 
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {

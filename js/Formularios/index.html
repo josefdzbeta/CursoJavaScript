@@ -4,6 +4,7 @@
 <meta charset=utf-8 />
 <meta name=author content='Jose Angel' />
 <link rel=stylesheet href=css/style.css />
+<link rel=stylesheet href=https://necolas.github.io/normalize.css/8.0.1/normalize.css>
 
 <title>Validación de Formularios</title>
 </head>
@@ -12,22 +13,26 @@
 <h2>Validación de Formularios</h2>
 <p>Ejercicio de Validación de Formularios.</p>
 
+
 <div class="container">
-  <form>
+  <form id="formulario">
   <div class="row">
     <div class="col-25">
       <label for="iNombre">Nombre</label>
+      
     </div>
-    <div class="col-75">
-      <input type="text" id="iNombre" placeholder="Nombre ..."required="required">
+    <div class="col-75" >
+      <input type="text" id="iNombre" name ="iNombre" placeholder="Nombre" required="required">
     </div>
   </div>
   <div class="row">
     <div class="col-25">
       <label for="iApellidos">Apellidos</label>
+      
+
     </div>
     <div class="col-75">
-      <input type="text" id="iApellidos" placeholder="Apellidos..."required="required">
+      <input type="text" id="iApellidos"  name ="iApellidos"  placeholder="Apellidos..."required="required">
     </div>
   </div>
   <div class="row">
@@ -35,7 +40,7 @@
       <label for="iEmail" >Email</label>
     </div>
     <div class="col-75">
-      <input type="text" id="iEmail" placeholder="Correo eléctrico..."required="required">
+      <input type="text" id="iEmail" name ="iEmail" placeholder="Correo eléctrico..."required="required">
     </div>
   </div>
   <div class="row">
@@ -43,7 +48,7 @@
       <label for="iNIF">NIF</label>
     </div>
     <div class="col-75">
-      <input type="text" id="iNIF" pattern="[0-9]{8}[A-Z]" placeholder="NIF..."required="required">
+      <input type="text" id="iNIF" name ="iNIF"  pattern="[0-9]{8}[A-Z]" placeholder="NIF..."required="required">
     </div>
   </div>
   <div class="row">
@@ -51,7 +56,7 @@
       <label for="iTelefono">Teléfono</label>
     </div>
     <div class="col-75">
-      <input type="text" id="iTelefono" placeholder="Teléfono... mi caaasa..."required="required">
+      <input type="text" id="iTelefono" name ="iTelefono"  placeholder="Teléfono... mi caaasa..."required="required">
     </div>
   </div>
   <div class="row">
@@ -95,5 +100,6 @@
   </form>
 </div>
   <script src=js/validaciones.js></script>
+  <script src=https://kit.fontawesome.com/2c36e9b7b1.js crossorigin=anonymous></script>
 </body>
 </html>
