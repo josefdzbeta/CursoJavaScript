@@ -53,10 +53,11 @@ const validarCampo = (expresion, input, campo) => {
     if(expresion.test(input.value)){ //Comprobamos si la expresion regular es valida 
         document.getElementById(`${campo}`).classList.remove('incorrecto') //Quitamos la clase incorrecto
         document.getElementById(`${campo}`).classList.add('correcto')
-    
+        campos[campo] = true
     }else{
         document.getElementById(`${campo}`).classList.add('incorrecto')
         document.getElementById(`${campo}`).classList.remove('correcto')
+        campos[campo] = false
     }
 }
 inputs.forEach((input) => {
@@ -67,8 +68,8 @@ inputs.forEach((input) => {
 
 //Comprobamos que todo está correcto, al hacer submit, se reinicia el formulario 
 formulario.addEventListener('submit', (evento) => {
-   
-
+    evento.preventDefault()
+    
     const iPolitica = document.getElementById('iPolitica')
     
 	if(campos.iNombre && campos.iApellidos && campos.iNIF && campos.iEmail && campos.iTelefono && iPolitica.checked){
