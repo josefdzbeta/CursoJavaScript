@@ -8,7 +8,6 @@ Script para validar un Formulario
 
 'use strict'
 
-
 const formulario = document.getElementById('formulario'); // Para acceder al formulario
 const inputs = document.querySelectorAll('#formulario input'); // Para almacenar todos los inputs del formulario 
 
@@ -29,36 +28,35 @@ const campos = {
     iTelefono: false
 }
 
+//Pasamos expresion regular, el input que recibe el evento y por último el campo. 
 const validarFormulario = (evento) => {
     switch (evento.target.name) {
         case "iNombre":
-            validarCampo(expresiones.iNombre, evento.target, evento.target.name)
+            validarCampo(expresiones.iNombre, evento.target, 'iNombre')
         break
         case "iApellidos":
-            validarCampo(expresiones.iApellidos, evento.target, evento.target.name)
+            validarCampo(expresiones.iApellidos, evento.target, 'iApellidos')
         break
         case "iEmail":
-            validarCampo(expresiones.iEmail, evento.target, evento.target.name)
+            validarCampo(expresiones.iEmail, evento.target, 'iEmail')
         break
         case "iNIF":
-            validarCampo(expresiones.iNIF, evento.target, evento.target.name)
+            validarCampo(expresiones.iNIF, evento.target, 'iNIF')
         break
         case "iTelefono":
-            validarCampo(expresiones.iTelefono, evento.target, evento.target.name)
+            validarCampo(expresiones.iTelefono, evento.target, 'iTelefono')
         break
     }
 }
 const validarCampo = (expresion, input, campo) => {
-    if(expresion.test(input.value)){ //Comprobamos si la expresion regular es valida 
 
+    if(expresion.test(input.value)){ //Comprobamos si la expresion regular es valida 
         document.getElementById(`${campo}`).classList.remove('incorrecto') //Quitamos la clase incorrecto
         document.getElementById(`${campo}`).classList.add('correcto')
     
     }else{
         document.getElementById(`${campo}`).classList.add('incorrecto')
         document.getElementById(`${campo}`).classList.remove('correcto')
-
-    
     }
 }
 inputs.forEach((input) => {
@@ -67,12 +65,14 @@ inputs.forEach((input) => {
    
 })
 
+//Comprobamos que todo está correcto, al hacer submit, se reinicia el formulario 
 formulario.addEventListener('submit', (evento) => {
     evento.preventDefault()
 
-    const iPolitica = document.getElementById('iPolitica');
-	if(campos.iNombre && campos.iApellidos && campos.iNIF && campos.iEmail && campos.iTelefono && iPolitica.checked ){
-		formulario.reset();
+    const iPolitica = document.getElementById('iPolitica')
+    const brocoli = document.getElementById('brocoli')
+	if(campos.iNombre && campos.iApellidos && campos.iNIF && campos.iEmail && campos.iTelefono && iPolitica.checked && brocoli.checked){
+		formulario.reset()
 	}
 
 })
