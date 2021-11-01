@@ -69,12 +69,15 @@ inputs.forEach((input) => {
 //Comprobamos que todo está correcto, al hacer submit, se reinicia el formulario 
 formulario.addEventListener('submit', (evento) => {
     evento.preventDefault()
-    
+
     const iPolitica = document.getElementById('iPolitica')
     
 	if(campos.iNombre && campos.iApellidos && campos.iNIF && campos.iEmail && campos.iTelefono && iPolitica.checked){
-		formulario.reset()
-	}
+        formulario.reset()
+        alert('Tus datos han sido enviados correctamente')
+	}else{
+        alert('Introduzca los datos correctamente')
+    }
 
 })
 
