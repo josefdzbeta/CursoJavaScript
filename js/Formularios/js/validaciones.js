@@ -28,10 +28,11 @@ const campos = {
     iTelefono: false
 }
 
-//Pasamos expresion regular, el input que recibe el evento y por último el campo. 
+ 
 const validarFormulario = (evento) => { 
     switch (evento.target.name) {
         case "iNombre":
+            //Pasamos expresion regular, el input que recibe el evento y por último el campo.
             validarCampo(expresiones.iNombre, evento.target, 'iNombre')
         break
         case "iApellidos":
