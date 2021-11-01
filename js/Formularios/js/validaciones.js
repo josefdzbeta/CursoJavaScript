@@ -19,7 +19,7 @@ const expresiones = {
 	iTelefono: /^\d{9}$/, // 9 numeros.
     iNIF: /^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/i //DNI 
 }
-
+//Inicializamos los campos a falso
 const campos = {
     iNombre: false,
     iApellidos: false,
@@ -29,7 +29,7 @@ const campos = {
 }
 
 //Pasamos expresion regular, el input que recibe el evento y por último el campo. 
-const validarFormulario = (evento) => {
+const validarFormulario = (evento) => { 
     switch (evento.target.name) {
         case "iNombre":
             validarCampo(expresiones.iNombre, evento.target, 'iNombre')
@@ -50,7 +50,7 @@ const validarFormulario = (evento) => {
 }
 const validarCampo = (expresion, input, campo) => {
 
-    if(expresion.test(input.value)){ //Comprobamos si la expresion regular es valida 
+    if(expresion.test(input.value)){ //Comprobamos si la expresion regular es válida 
         document.getElementById(`${campo}`).classList.remove('incorrecto') //Quitamos la clase incorrecto
         document.getElementById(`${campo}`).classList.add('correcto')
         campos[campo] = true
@@ -61,8 +61,8 @@ const validarCampo = (expresion, input, campo) => {
     }
 }
 inputs.forEach((input) => {
-    input.addEventListener('keyup', validarFormulario) // Ejecutar funcion al levantar una tecla
-    input.addEventListener('blur', validarFormulario) // Ejecutar funcion al pinchar fuera del formulario 
+    input.addEventListener('keyup', validarFormulario) // Ejecutar función al levantar una tecla
+    input.addEventListener('blur', validarFormulario) // Ejecutar función al pinchar fuera del formulario 
    
 })
 
@@ -71,7 +71,7 @@ formulario.addEventListener('submit', (evento) => {
     evento.preventDefault()
 
     const iPolitica = document.getElementById('iPolitica')
-    
+    //Si los campos son verdaderos, entonces los datos están bien y podemos enviar el formulario
 	if(campos.iNombre && campos.iApellidos && campos.iNIF && campos.iEmail && campos.iTelefono && iPolitica.checked){
         formulario.reset()
         alert('Tus datos han sido enviados correctamente')
