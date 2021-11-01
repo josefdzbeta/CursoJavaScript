@@ -67,11 +67,11 @@ inputs.forEach((input) => {
 
 //Comprobamos que todo está correcto, al hacer submit, se reinicia el formulario 
 formulario.addEventListener('submit', (evento) => {
-    evento.preventDefault()
+   
 
     const iPolitica = document.getElementById('iPolitica')
-    const brocoli = document.getElementById('brocoli')
-	if(campos.iNombre && campos.iApellidos && campos.iNIF && campos.iEmail && campos.iTelefono && iPolitica.checked && brocoli.checked){
+    
+	if(campos.iNombre && campos.iApellidos && campos.iNIF && campos.iEmail && campos.iTelefono && iPolitica.checked){
 		formulario.reset()
 	}
 
