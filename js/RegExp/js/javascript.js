@@ -13,5 +13,9 @@ function iniciar(){
 
 function comprobar(){
     console.log("Comprobar...")
-    let exp1 = new RegExp('(\d{1-3}.){3}\d{1-3}')
+    let exp1 = new RegExp('(\d{1,3}.){3}\d{1,3}')
+    if(!exp1.test(document.getElementById('iIP').value)){
+        console.log("IP erronea")
+    }
+
 }
